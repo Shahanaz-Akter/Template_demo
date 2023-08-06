@@ -14,6 +14,14 @@
   <!-- swiper css linkup -->
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
+  <!-- Boxicon linkup -->
+  <!-- <link rel="stylesheet" href="assets/css/css_boxicons.min.css" /> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom css linkup -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
   <style>
     * {
       margin: 0px;
@@ -67,197 +75,136 @@
 
 
     /* footer css */
-    ul {
-      margin: 0px;
-      padding: 0px;
+    .footer-main {
+      padding-top: 90px;
     }
 
-    .footer-section {
-      background: #151414;
-      position: relative;
+    .address-main>div.col-lg-4 {
+      border-bottom: dotted 1px #999;
     }
 
-    .footer-cta {
-      border-bottom: 1px solid #373636;
-    }
-
-    .single-cta i {
-      color: #ff5e14;
-      font-size: 30px;
-      float: left;
-      margin-top: 8px;
-    }
-
-    .cta-text {
-      padding-left: 15px;
-      display: inline-block;
-    }
-
-    .cta-text h4 {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 2px;
-    }
-
-    .cta-text span {
-      color: #757575;
-      font-size: 15px;
-    }
-
-    .footer-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .footer-pattern img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 330px;
-      background-size: cover;
-      background-position: 100% 100%;
-    }
-
-    .footer-logo {
+    .address-box {
+      padding: 10px 0;
       margin-bottom: 30px;
     }
 
-    .footer-logo img {
-      max-width: 200px;
-    }
-
-    .footer-text p {
-      margin-bottom: 14px;
-      font-size: 14px;
-      color: #7e7e7e;
-      line-height: 28px;
-    }
-
-    .footer-social-icon span {
-      color: #fff;
-      display: block;
-      font-size: 20px;
-      font-weight: 700;
-      font-family: 'Poppins', sans-serif;
-      margin-bottom: 20px;
-    }
-
-    .footer-social-icon a {
-      color: #fff;
-      font-size: 16px;
-      margin-right: 15px;
-    }
-
-    .footer-social-icon i {
-      height: 40px;
-      width: 40px;
-      text-align: center;
-      line-height: 38px;
-      border-radius: 50%;
-    }
-
-    .facebook-bg {
-      background: #3B5998;
-    }
-
-    .twitter-bg {
-      background: #55ACEE;
-    }
-
-    .google-bg {
-      background: #DD4B39;
-    }
-
-    .footer-widget-heading h3 {
-      color: #fff;
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 40px;
-      position: relative;
-    }
-
-    .footer-widget-heading h3::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -15px;
-      height: 2px;
-      width: 50px;
-      background: #ff5e14;
-    }
-
-    .footer-widget ul li {
-      display: inline-block;
+    .add-icon {
       float: left;
-      width: 50%;
-      margin-bottom: 12px;
-    }
-
-    .footer-widget ul li a:hover {
-      color: #ff5e14;
-    }
-
-    .footer-widget ul li a {
-      color: #878787;
-      text-transform: capitalize;
-    }
-
-    .subscribe-form {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .subscribe-form input {
-      width: 100%;
-      padding: 14px 28px;
-      background: #2E2E2E;
-      border: 1px solid #2E2E2E;
-      color: #fff;
-    }
-
-    .subscribe-form button {
-      position: absolute;
-      right: 0;
-      background: #ff5e14;
-      padding: 13px 20px;
-      border: 1px solid #ff5e14;
-      top: 0;
-    }
-
-    .subscribe-form button i {
-      color: #fff;
-      font-size: 22px;
-      transform: rotate(-6deg);
-    }
-
-    .copyright-area {
-      background: #202020;
-      padding: 25px 0;
-    }
-
-    .copyright-text p {
-      margin: 0;
-      font-size: 14px;
-      color: #878787;
-    }
-
-    .copyright-text p a {
-      color: #ff5e14;
-    }
-
-    .footer-menu li {
+      width: 60px;
       display: inline-block;
-      margin-left: 20px;
+      padding: 0px 5px;
     }
 
-    .footer-menu li:hover a {
-      color: #ff5e14;
+    .address-box .add-icon {
+      background: #27303b;
+      height: 75px;
+      line-height: 75px;
+      width: 75px;
+      margin-right: 20px;
+      text-align: center;
     }
 
-    .footer-menu li a {
+    .add-icon img {
+      width: 100%;
+    }
+
+    .address-box .add-icon img {
+      max-width: 40px;
+    }
+
+    .add-content {
+      padding-left: 70px;
+    }
+
+    .add-content h5 {
+      font-size: 17px;
+      color: #ffffff;
+      padding: 0;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .add-content p {
+      font-size: 13px;
+      color: #999999;
+      font-weight: 300;
+    }
+
+    .add-content p a {
       font-size: 14px;
-      color: #878787;
+      color: #999999;
+      font-weight: 300;
+      word-wrap: break-word;
+    }
+
+    .add-content p a:hover {
+      color: #ffb32d;
+    }
+
+    .footer-main {
+      padding-top: 70px;
+    }
+
+    .address-main>div.col-lg-4 {
+      border-bottom: dotted 1px #999;
+    }
+
+    .address-box {
+      padding: 10px 0;
+      margin-bottom: 30px;
+    }
+
+    .add-icon {
+      float: left;
+      width: 60px;
+      display: inline-block;
+      padding: 0px 5px;
+    }
+
+    .address-box .add-icon {
+      background: #27303b;
+      height: 75px;
+      line-height: 75px;
+      width: 75px;
+      margin-right: 20px;
+      text-align: center;
+    }
+
+    .add-icon img {
+      width: 100%;
+    }
+
+    .address-box .add-icon img {
+      max-width: 40px;
+    }
+
+    .add-content {
+      padding-left: 70px;
+    }
+
+    .add-content h5 {
+      font-size: 17px;
+      color: #ffffff;
+      padding: 0;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .add-content p {
+      font-size: 13px;
+      color: #999999;
+      font-weight: 300;
+    }
+
+    .add-content p a {
+      font-size: 14px;
+      color: #999999;
+      font-weight: 300;
+      word-wrap: break-word;
+    }
+
+    .add-content p a:hover {
+      color: #ffb32d;
     }
 
     /* others css */
@@ -290,6 +237,8 @@
 </head>
 
 <body>
+  <!-- start wrapper parent div -->
+
   <div class="ms-0 me-0 mt-0 mb-3">
     <!-- navbar start bg-body-tertiary -->
     <nav class="fixed-top navbar bg-dark navbar-expand-lg border border-opacity-50 border-2 border-secondary-subtle p-4 ms-0 me-0 mt-0">
@@ -509,22 +458,11 @@
 
                   <h2 class="">Main Menu
                   </h2>
-                  <h4 class="mt-2" style="">
-                    Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit,
-                    seddiam nonummy nibh euismod
-                    tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
-                    Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl
-                    ut aliquip commodo Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Suscipit fuga possimus, non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod. Explicabo alias a
-                    suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod. Explicabo alias a
-                    suscipit? Qui nulla sequi aperiam itaque?
-                  </h4>
+                  <div class="mt-2" style="">
+                    <div>hello1</div>
+                    <div>hello2</div>
+
+                  </div>
                 </div>
               </div>
 
@@ -568,6 +506,25 @@
 
         <div class="row  mt-5">
           <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
+
+            <div class="row ">
+
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="col-md-3 col-lg-3 col-xl-3 text-end">
+                  <img src="/assets/img/slider/1.png" alt="Not Available" height="100px" width="100px" style="border: 1px solid transparent">
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
+                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
             <div class="row ">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-3 col-lg-3 col-xl-3 text-end">
@@ -603,7 +560,6 @@
 
           </div>
 
-
           <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
             <div class="row ">
               <div class="d-flex justify-content-center align-items-center">
@@ -621,57 +577,254 @@
             </div>
 
           </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-            <div class="row ">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-end">
-                  <img src="/assets/img/slider/1.png" alt="Not Available" height="100px" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-
         </div>
 
       </div>
 
-  </div>
-  </section>
+    </section>
 
 
 
+    <!-- Main Footer -->
+    <footer class="footer-main bg-dark mb-5">
+      <div class="container">
+        <div class="row address-main">
+
+          <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
+            <div class="address-box clearfix">
+              <!-- <div class="add-icon">
+                <img src="Img/footer-icon-01.png" alt="" />
+              </div> -->
+              <div class="add-content">
+                <h5 style="color: #d63384; font-weight: bold;  font-size: 20px;;">Address</h5>
+                <p> Lorem ipsum dolor sit amet, consectetur</p>
+                <p> Lorem ipsum dolor sit amet, consectetur</p>
+                <p> Lorem ipsum dolor sit amet, consectetur</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
+            <div class="address-box clearfix">
+             
+              <div class="add-content">
+                <h5 style="color: #d63384; font-weight: bold;  font-size: 20px;;">Phone</h5>
+                <p> +(91) 000000000 <br />
+                  +(91) 000000000 </p>
+                <p> +(91) 000000000 <br />
+                  +(91) 000000000 </p>
+              </div>
+            </div>
+          </div>
+         -->
+
+          <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
+            <div class="address-box clearfix">
+              <!-- <div class="add-icon">
+                <img src="Img/footer-icon-03.png" alt="" />
+              </div> -->
+              <div class="add-content">
+                <h5 class="" style="color: #d63384; font-weight: bold;  font-size: 20px;;">Location</h5>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
+            <div class="address-box clearfix">
+              <!-- <div class="add-icon">
+                <img src="Img/footer-icon-03.png" alt="" />
+              </div> -->
+              <div class="add-content">
+                <h5 class="" style="color: #d63384; font-weight: bold;  font-size: 20px;;">Contact Us</h5>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+                <p> <a href="mailto:" style="text-decoration:none">collab@codewithfaraz.com</a> </p>
+              </div>
+            </div>
+          </div>
 
 
-  <!-- Footer start2 -->
-  <footer class="mt-5 navbar bg-dark navbar-expand-lg border border-opacity-50 border-2 border-secondary-subtle p-4 ms-0 me-0 mt-0">
-    <div class="container-fluid">
+          <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
+            <div class="single-footer-widget">
+              <h3>Newsletter</h3>
+              <div class="footer-newsletter-box">
+                <p>To get the latest news and latest updates from us.</p>
+                <form class="newsletter-form" data-bs-toggle="validator" action="url('/post_msg')" method="post">
+                  @csrf
+                  <label>Your E-mail Address:</label>
+                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off" />
+                  <button type="submit">Subscribe</button>
+                  <div id="validator-newsletter" class="form-result"></div>
+                </form>
+              </div>
+            </div>
+          </div>
 
-      <div class="d-flex justify-content-around text-white">
-        <div>
-
-          Location
-
-        </div>
-
-        <div>
-
-          Contact Us
 
         </div>
       </div>
-    </div>
-  </footer>
+
+      <!-- Footer -->
+      <footer class="bg-dark text-center text-white">
+
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-facebook-f"></i></a>
+
+            <!-- Twitter -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
+
+            <!-- Google -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
+
+            <!-- Instagram -->
+            <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-instagram"></i></a>
+
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          codewithmimi © 2023 All Rights Reserved.
+        </div>
+        <!-- Copyright -->
+      </footer>
+
+    </footer>
+
+    <!-- another footer -->
+    <footer class="footer-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget">
+              <h3>About The Store</h3>
+              <div class="about-the-store">
+                <p>One of the most popular on the web is shopping.</p>
+                <ul class="footer-contact-info">
+                  <li>
+                    <i class="bx bx-map"></i>
+                    <a href="index.html#" target="_blank">Wonder Street, USA, New York</a>
+                  </li>
+                  <li>
+                    <i class="bx bx-phone-call"></i>
+                    <a href="tel:+01321654214">+01 321 654 214</a>
+                  </li>
+                  <li>
+                    <i class="bx bx-envelope"></i>
+                    <a href="../../cdn-cgi/l/email-protection.html#83ebe6efefecc3fbf7ecedade0ecee"><span class="__cf_email__" data-cfemail="79111c15151639010d1617571a1614">[email&#160;protected]</span></a>
+                  </li>
+                </ul>
+              </div>
+              <ul class="social-link">
+                <li>
+                  <a href="index.html#" class="d-block" target="_blank"><i class="bx bxl-facebook"></i></a>
+                </li>
+                <li>
+                  <a href="index.html#" class="d-block" target="_blank"><i class="bx bxl-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="index.html#" class="d-block" target="_blank"><i class="bx bxl-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="index.html#" class="d-block" target="_blank"><i class="bx bxl-linkedin"></i></a>
+                </li>
+                <li>
+                  <a href="index.html#" class="d-block" target="_blank"><i class="bx bxl-pinterest-alt"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget pl-4">
+              <h3>Quick Links</h3>
+              <ul class="quick-links">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="products-left-sidebar.html">Shop Now!</a></li>
+                <li><a href="products-left-sidebar-2.html">Woman's</a></li>
+                <li><a href="faqs.html">FAQ's</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="customer-service.html">Customer Services</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget">
+              <h3>Customer Support</h3>
+              <ul class="customer-support">
+                <li><a href="login.html">My Account</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="faqs.html">FAQ's</a></li>
+                <li><a href="track-order.html">Order Tracking</a></li>
+                <li><a href="contact.html">Help & Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="single-footer-widget">
+              <h3>Newsletter</h3>
+              <div class="footer-newsletter-box">
+                <p>To get the latest news and latest updates from us.</p>
+                <form class="newsletter-form" data-bs-toggle="validator">
+                  <label>Your E-mail Address:</label>
+                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off" />
+                  <button type="submit">Subscribe</button>
+                  <div id="validator-newsletter" class="form-result"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom-area">
+          <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+              <p>
+                © Powered by
+                <a href="https://ztrios.com/" target="_blank" style="font-size: 18px;">Ztrios</a>
+              </p>
+            </div>
+            <div class="col-lg-6 col-md-6">
+              <ul class="payment-types">
+                <li>
+                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/visa.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/mastercard.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/mastercard2.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/visa2.png" alt="image" /></a>
+                </li>
+                <li>
+                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/expresscard.png" alt="image" /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </footer>
+    <div class="go-top"><i class="bx bx-up-arrow-alt"></i></div>
+
+
 
   </div>
+  <!-- end wraper parent div -->
 
   <!-- FontAwesome js linkup -->
   <script src="assets/js/fontawesome_min.js"></script>
