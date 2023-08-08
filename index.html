@@ -17,9 +17,7 @@
   <!-- Boxicon linkup -->
   <!-- <link rel="stylesheet" href="assets/css/css_boxicons.min.css" /> -->
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
-    integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom css linkup -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -29,6 +27,11 @@
       margin: 0px;
       padding: 0px;
       box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
+
     }
 
     /* variable is not working this way */
@@ -50,12 +53,19 @@
 
 
     /* navbar css */
+
+    .banner_parent {
+      width: 100vw;
+    }
+
     .banner_part {
-      /* width: 100vw; */
-      height: 90vh;
+      height: 80vh;
       background-image: url("assets/img/banner.jpg");
       background-repeat: no-repeat;
       background-size: cover;
+      /* width: 100%; */
+      background-position: center center;
+      /* Keep the background image fixed within the viewport */
     }
 
     /* swiper css  */
@@ -210,14 +220,23 @@
     }
 
     /* others css */
+    .img_width {
+      height: auto;
+      width: 100%;
+      max-width: 600px;
 
+    }
 
 
     /* Media query */
-    @media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1400px) {
       .text-color {
         color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* opacity: 80%; */
+        padding: 10px;
       }
+
     }
 
     /* Large Screens (993px to 1200px) */
@@ -252,13 +271,10 @@
   <div class="ms-0 me-0 mt-0 mb-3">
 
     <!-- navbar start bg-body-tertiary -->
-    <nav
-      class="fixed-top navbar bg-dark navbar-expand-lg border border-opacity-50 border-2 border-secondary-subtle p-4 ms-0 me-0 mt-0">
+    <nav class="fixed-top navbar bg-dark navbar-expand-lg border border-opacity-50 b border-secondary-subtle p-4 ms-0 me-0 mt-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
-        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-          aria-label="Toggle navigation">
+        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -290,18 +306,15 @@
             </li>
 
             <li class="nav-item me-md-4 me-sm-4 ms-lg-2  ms-sm-0 ms-md-0 me-3">
-              <button style="border-radius: 20px; border: 2px solid transparent" class="btn btn-success ps-3 mt-1"
-                type="submit">
+              <button style="border-radius: 20px; border: 2px solid transparent" class="btn btn-success ps-3 mt-1" type="submit">
                 <i class="fas fa-shopping-bag fa-fade me-2"></i>Add Cart
               </button>
             </li>
           </ul>
 
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-              style="border-radius: 20px; border: 2px solid transparent" />
-            <button class="btn btn-outline-success" type="submit"
-              style="border-radius: 15px; border: 1px solid transparent">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 20px; border: 2px solid transparent" />
+            <button class="btn btn-outline-success" type="submit" style="border-radius: 15px; border: 1px solid transparent">
               Search
             </button>
           </form>
@@ -312,19 +325,21 @@
 
 
     <!-- Banner start -->
-    <section class="banner_part row mb-5" style="border: 2px solid transparent">
-      <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 1px solid transparent"></div>
-      <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6"
-        style="border: 1px solid transparent">
+    <section class="img-fluid banner_parent mb-5" style="border: 2px solid transparent">
 
-        <div class="text-capitalize text-center text-color">
-          <h2 class="fw-bold">Elevating Ordinary
-            Ingredients
-          </h2>
-          <h4>We Transforms Meals into Art</h4>
+      <section class="banner_part row ">
+        <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 1px solid transparent"></div>
+        <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6" style="border: 1px solid transparent">
+
+          <div class="text-capitalize text-center text-color p-md-3 p-sm-2 p-lg-3">
+            <h2 class="fw-bold">Elevating Ordinary
+              Ingredients
+            </h2>
+            <h4>We Transforms Meals into Art</h4>
+          </div>
+
         </div>
-
-      </div>
+      </section>
     </section>
 
 
@@ -333,50 +348,34 @@
     <section class="m-5 p-2" style="border: 2px solid transparent;">
       <div class="m-5">
 
-        <h1 class="text-center mb-5 fw-bold">Brands</h1>
-        <div class="text-center mb-5 text-white">....</div>
+        <h1 class="text-center mb-5 mb-md-2 mb-lg-2  fw-bold">Brands</h1>
+        <div class="text-center mb-2 text-white">....</div>
 
         <div class="row mt-5">
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
+          <div class="d-flex justify-content-center align-items-center pb-md-5 pb-sm-5 pb-lg-5 col-12 col-md-12 col-lg-12 col-xl-6" style="border: 3px solid transparent">
             <div class="" style="border: 1px solid transparent;">
+              <div style="border: 3px solid transparent;">
+                <h2 class="">Welcome to
+                  <br>
+                  Our Restaurant
+                </h2>
+                <h4 class="mt-2" style="">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
-
-                  <h2 class="">Welcome to
-                    <br>
-                    Our Restaurant
-                  </h2>
-                  <h4 class="mt-2" style="">
-                    Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit,
-                    seddiam nonummy nibh euismod
-                    tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
-                    Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl
-                    ut aliquip commodo Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Suscipit fuga possimus, non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                    Explicabo alias a
-                    suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                    Explicabo alias a
-                    suscipit? Qui nulla sequi aperiam itaque?
-                  </h4>
-                </div>
+                  architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
+                  Explicabo alias a
+                  suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
+                  architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
+                  Explicabo alias a
+                  suscipit? Qui nulla sequi aperiam itaque?
+                </h4>
               </div>
-
             </div>
           </div>
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid blue;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout1.png" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6  pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent" style="border: 3px solid blue;">
+            <div class="">
+              <img class="img_width" src="/assets/img/layout1.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
             </div>
           </div>
 
@@ -395,16 +394,15 @@
         <div class="text-center mb-5 text-white">....</div>
 
         <div class="row mt-5">
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+            <div class="">
+              <img class="img_width" src="/assets/img/layout2.jpg" alt="Not Available" height="" width="" style="border: 1px solid transparent">
             </div>
           </div>
 
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6" style="border: 3px solid transparent">
             <div class="" style="border: 1px solid transparent;">
 
               <div class="d-flex justify-content-center align-items-center">
@@ -413,18 +411,6 @@
                   <h2 class="">Why Choose Us
                   </h2>
                   <h4 class="mt-2" style="">
-                    Lorem ipsum dolor sit amet,
-                    consectetuer adipiscing elit,
-                    seddiam nonummy nibh euismod
-                    tincidunt ut laoreet dolore
-                    magna aliquam erat volutpat.
-                    Ut wisi enim ad minim veniam,
-                    quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl
-                    ut aliquip commodo Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Suscipit fuga possimus, non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                    Explicabo alias a
                     suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
                     architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
                     Explicabo alias a
@@ -489,8 +475,8 @@
             </div>
             <div class="swiper-slide">
               <div>
-                <img src="assets/img/slider/4.png" alt="not Available" height="auto" width="300px">
-                <div>Item16</div>
+                <img src="assets/img/slider/2.png" alt="not Available" height="auto" width="300px">
+                <div>Item6</div>
               </div>
             </div>
             <div class="swiper-slide">
@@ -505,565 +491,515 @@
       </div>
     </section>
 
-    <!-- layout part 4 slider menu start-->
+
+    <!-- Menu layout start -->
     <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
 
-        <h1 class="text-center mb-5 fw-bold">Menu</h1>
-        <div class="text-center mb-5 text-white">....</div>
+      <!-- part 1-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-        <div class="row mt-5">
+          <h1 class="text-center mb-5 fw-bold">Menu</h1>
+          <div class="text-center text-white">....</div>
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+          <div class="row mt-5">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div style="border: 3px solid transparent;">
 
-                    <div class="accordion" id="accordionFlushExample">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                      <div class="accordion" id="accordionFlushExample">
+
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
+          </div>
 
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- part 2-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-    <!-- layout part 5 slider-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+          <div class="text-center text-white">....</div>
 
-        <div class="text-center mb-5 text-white">....</div>
+          <div class="row mt-5">
 
-        <div class="row mt-5">
-
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div style="border: 3px solid transparent;">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                    <div class="accordion" id="accordionFlushExample">
+                      <div class="accordion" id="accordionFlushExample">
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
+
           </div>
 
-
-
-
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- part 3-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-    <!-- layout part 6 slider-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+          <div class="text-center text-white">....</div>
 
-        <div class="text-center mb-5 text-white">....</div>
+          <div class="row mt-5">
 
-        <div class="row mt-5">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div style="border: 3px solid transparent;">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                      <div class="accordion" id="accordionFlushExample">
 
-                    <div class="accordion" id="accordionFlushExample">
-
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/vege.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
+
+          </div>
 
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- part 4-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-    <!-- layout part 7 slider-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+          <div class="text-center text-white">....</div>
 
-        <div class="text-center mb-5 text-white">....</div>
+          <div class="row mt-5">
 
-        <div class="row mt-5">
-
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/drinks.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div style="border: 3px solid transparent;">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                    <div class="accordion" id="accordionFlushExample">
+                      <div class="accordion" id="accordionFlushExample">
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
+
+
+
+
           </div>
 
-
-
-
         </div>
+      </section>
 
-      </div>
-    </section>
+      <!-- part 5-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-    <!-- layout part 8 slider-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+          <div class="text-center text-white">....</div>
 
-        <div class="text-center mb-5 text-white">....</div>
+          <div class="row mt-5">
 
-        <div class="row mt-5">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+                <div class="d-flex justify-content-center align-items-center">
+                  <div style="border: 3px solid transparent;">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                      <div class="accordion" id="accordionFlushExample">
 
-                    <div class="accordion" id="accordionFlushExample">
-
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/tea.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
+
+          </div>
 
         </div>
-
-      </div>
-    </section>
+      </section>
 
 
-    <!-- layout part 9 slider-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+      <!-- part 6-->
+      <section class="mb-5" style="border: 2px solid transparent;">
+        <div class="m-5">
 
-        <div class="text-center mb-5 text-white">....</div>
+          <div class="text-center text-white">....</div>
 
-        <div class="row mt-5">
+          <div class="row mt-5">
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent"
-            style="border: 3px solid transparent;">
-            <div class="d-flex justify-content-center align-items-center">
-              <img src="/assets/img/layout2.jpg" alt="Not Available" height="400px" width="auto"
-                style="border: 1px solid transparent">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
+              <div class="">
+                <img class="img_width" src="/assets/img/ice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+              </div>
             </div>
-          </div>
 
 
-          <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent">
+              <div class="" style="border: 1px solid transparent;">
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+                <div class="">
+                  <div style="border: 3px solid transparent;">
 
-                  <h2 class="">Main Menu
-                  </h2>
-                  <div class="mt-2" style="">
+                    <h2 class="mb-4">Main Menu
+                    </h2>
+                    <div class="mt-2" style="">
 
-                    <div class="accordion" id="accordionFlushExample">
+                      <div class="accordion" id="accordionFlushExample">
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                            Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                            body.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                              body.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                            Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                            body. Let's imagine this being filled with some actual content.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                              body. Let's imagine this being filled with some actual content.</div>
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="accordion-item mb-3">
-                        <h2 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree" aria-expanded="false"
-                            aria-controls="flush-collapseThree">
-                            Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                          </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                          data-bs-parent="#accordionFlushExample">
-                          <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                            body. Nothing more exciting happening here in terms of content, but just filling up the
-                            space to make it look, at least at first glance, a bit more representative of how this would
-                            look in a real-world application.</div>
+                        <div class="accordion-item mb-3">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                            </button>
+                          </h2>
+                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                              body. Nothing more exciting happening here in terms of content, but just filling up the
+                              space to make it look, at least at first glance, a bit more representative of how this would
+                              look in a real-world application.</div>
+                          </div>
                         </div>
+
                       </div>
 
                     </div>
-
                   </div>
-                </div>
 
+                </div>
               </div>
             </div>
+
+
+
+
           </div>
 
-
-
-
         </div>
+      </section>
 
-      </div>
+
     </section>
+
 
     <!-- layout part Reviews-->
-    <section class="m-5 p-2" style="border: 2px solid transparent ;">
+    <section class="" style="border: 2px solid transparent ;">
       <div class="m-5">
 
         <h1 class="text-center fw-bold">Reviews</h1>
@@ -1076,8 +1012,7 @@
 
               <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px"
-                    style="border: 1px solid transparent">
+                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
                 </div>
 
                 <div class="col-md-3 col-lg-3 col-xl-3">
@@ -1100,8 +1035,7 @@
 
               <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px"
-                    style="border: 1px solid transparent">
+                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
                 </div>
 
                 <div class="col-md-3 col-lg-3 col-xl-3">
@@ -1118,27 +1052,7 @@
             <div class="row ">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/2.png" alt="Not Available" height="auto" width="100px"
-                    style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-            <div class="row ">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/3.png" alt="Not Available" height="auto" width="100px"
-                    style="border: 1px solid transparent">
+                  <img src="/assets/img/slider/2.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
                 </div>
 
                 <div class="col-md-3 col-lg-3 col-xl-3">
@@ -1156,8 +1070,25 @@
             <div class="row ">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/4.png" alt="Not Available" height="auto" width="100px"
-                    style="border: 1px solid transparent">
+                  <img src="/assets/img/slider/3.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
+                </div>
+
+                <div class="col-md-3 col-lg-3 col-xl-3">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
+                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
+            <div class="row ">
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
+                  <img src="/assets/img/slider/4.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
                 </div>
 
                 <div class="col-md-3 col-lg-3 col-xl-3">
@@ -1199,9 +1130,7 @@
                   </li>
                   <li>
                     <i class="bx bx-envelope"></i>
-                    <a href="../../cdn-cgi/l/email-protection.html#83ebe6efefecc3fbf7ecedade0ecee"><span
-                        class="__cf_email__"
-                        data-cfemail="79111c15151639010d1617571a1614">[email&#160;protected]</span></a>
+                    <a href="../../cdn-cgi/l/email-protection.html#83ebe6efefecc3fbf7ecedade0ecee"><span class="__cf_email__" data-cfemail="79111c15151639010d1617571a1614">[email&#160;protected]</span></a>
                   </li>
                 </ul>
               </div>
@@ -1257,8 +1186,7 @@
                 <p>To get the latest news and latest updates from us.</p>
                 <form class="newsletter-form" data-bs-toggle="validator">
                   <label>Your E-mail Address:</label>
-                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required
-                    autocomplete="off" />
+                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off" />
                   <button type="submit">Subscribe</button>
                   <div id="validator-newsletter" class="form-result"></div>
                 </form>
