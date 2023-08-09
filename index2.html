@@ -1,175 +1,298 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Template Demo</title>
 
-    <!-- Bootstrap linkup -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- Bootstrap linkup -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <!-- FontAwesome css linkup -->
+  <link rel="stylesheet" href="assets/css/fontawesome_min.css" />
 
-    <!-- FontAwesome css linkup -->
-    <link rel="stylesheet" href="assets/css/fontawesome_min.css" />
+  <!-- swiper css linkup -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+  <!-- Boxicon linkup -->
+  <!-- <link rel="stylesheet" href="assets/css/css_boxicons.min.css" /> -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Custom css linkup -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
 
 
-    <!-- flaticon linkup -->
-    <link rel="stylesheet" href="asset1/css/flaticon.css" />
 
-    <!-- Boxicon linkup -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
 
-    <!-- Custom css linkup -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    .swiper_body {
+      position: relative;
+      height: 50vh;
+    }
 
+    /* body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    } */
 
+    .swiper {
+      max-width: 50%;
+      overflow: visible;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+    }
+
+    .swiper-slide::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, #b8b8b88f, #ffffff5e);
+    }
+
+    .swiper-slide-active::after {
+      background: none;
+    }
+
+    .swiper-slide>div {
+      text-align: center;
+      display: none;
+      opacity: 0;
+    }
+
+    .swiper-slide-active div {
+      display: block;
+      opacity: 1;
+    }
+
+    .swiper-slide h2 {
+      font-size: 1.2rem;
+      font-family: "Libre Baskerville", serif;
+      position: relative;
+    }
+
+    .swiper-slide h2::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      background: linear-gradient(#e66465, #9198e5);
+    }
+
+    @keyframes line {
+      0% {
+        width: 0;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    .swiper-slide-active h2::after {
+      animation: line 0.5s linear forwards;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
+      border-radius: 50%;
+      aspect-ratio: 1/1;
+    }
+
+    @media (min-width: 768px) {
+      .swiper-slide h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
+  <!-- start wrapper parent div -->
+  <div class="ms-0 me-0 mt-0 mb-3">
+    <!-- swiper layout part 3-->
+    <section class="ms-2 me-2 mt-2 m-5 p-2" style="border: 2px solid transparent;">
+      <div class="m-5">
+
+        <h1 class="text-center mb-2 fw-bold">Reviews</h1>
+        <div class="text-center mb-5">Check the prices of our packages
+        </div>
+        <!-- <div class="text-center mb-5 text-white">....</div> -->
 
 
-    <!-- Main Footer -->
-    <footer class="footer-main mb-5" style="background: #000;">
-        <div class="container">
-          <div class="row address-main">
-  
-            <div class="col-lg-3 col-sm-13 col-xs-3 mb-5">
-              <div class="address-box clearfix">
-                <!-- <div class="add-icon">
-                  <img src="Img/footer-icon-01.png" alt="" />
-                </div> -->
-                <div class="add-content">
-                  <h5 class="pb-2 border border-start-0  border-top-0  border-end-0 border-white mb-3"
-                    style=" color: white; font-weight: bold; font-size: 20px;">Address</h5>
-  
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-  
-                </div>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" alt="Grilled steak with vegetables" />
+              <div>
+                <h2>Grilled steak with vegetables</h2>
               </div>
             </div>
-            <!-- <div class="col-lg-3 col-sm-13 col-xs-3mb-5">
-              <div class="address-box clearfix">
-               
-                <div class="add-content">
-                  <h5 style="color: white; font-weight: bold;  font-size: 20px;;">Phone</h5>
-                  <p> +(91) 000000000 <br />
-                    +(91) 000000000 </p>
-                  <p> +(91) 000000000 <br />
-                    +(91) 000000000 </p>
-                </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80" alt="Pizza" />
+              <div>
+                <h2>Pizza</h2>
               </div>
             </div>
-           -->
-  
-            <div class="col-lg-3 col-sm-13 col-xs-3 mb-5">
-              <div class="address-box clearfix">
-                <!-- <div class="add-icon">
-                <img src="Img/footer-icon-01.png" alt="" />
-              </div> -->
-                <div class="add-content">
-                  <h5 class="pb-2 border border-start-0  border-top-0  border-end-0 border-white mb-3"
-                    style=" color: white; font-weight: bold; font-size: 20px;">Location</h5>
-  
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-  
-                </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=410&q=80" alt="Sandwich with boiled egg" />
+              <div>
+                <h2>Sandwich with boiled egg</h2>
               </div>
             </div>
-  
-            <div class="col-lg-3 col-sm-13 col-xs-3 mb-5">
-              <div class="address-box clearfix">
-                <!-- <div class="add-icon">
-                <img src="Img/footer-icon-01.png" alt="" />
-              </div> -->
-                <div class="add-content">
-                  <h5 class="pb-2 border border-start-0  border-top-0  border-end-0 border-white mb-3"
-                    style=" color: white; font-weight: bold; font-size: 20px;">Location</h5>
-  
-                  <p style="font-size:15px; font-weight: 600;color:#fff;">mimi@gmail.com</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-                  <p style="font-size:15px; font-weight: 600;color:#fff;"> Lorem ipsum dolor sit amet, consectetur</p>
-  
-                </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80" alt="Toast bread with blueberry" />
+              <div>
+                <h2>Toast bread with blueberry</h2>
               </div>
             </div>
-  
-  
-            <!-- <div class="col-lg-3 col-sm-13 col-xs-3 mb-5">
-              <div class="single-footer-widget">
-                <h3>Customer Support</h3>
-                <ul class="customer-support">
-                  <li><a href="login.html">My Account</a></li>
-                  <li><a href="checkout.html">Checkout</a></li>
-                  <li><a href="cart.html">Cart</a></li>
-                  <li><a href="faqs.html">FAQ's</a></li>
-                  <li><a href="track-order.html">Order Tracking</a></li>
-                  <li><a href="contact.html">Help & Support</a></li>
-                </ul>
-              </div>
-            </div> -->
-  
-  
-            <div class="col-lg-3 col-sm-13 col-xs-3 mb-5 margin_left">
-              <div class="single-footer-widget">
-                <h3 class="pb-2 border border-start-0  border-top-0  border-end-0 border-white mt-2 ">Newsletter</h3>
-                <div class="footer-newsletter-box">
-                  <p>To get the latest news and latest updates from us.</p>
-                  <form class="newsletter-form" data-bs-toggle="validator" action="url('/post_msg')" method="post">
-                    <label>Your E-mail Address:</label>
-                    <input type="email" class="input-newsletter form-control1" placeholder=" Enter your email"
-                      name="EMAIL" required autocomplete="off" style="max-width: 400px;" />
-                    <button class="btn form-control1" type="submit" style="max-width: 400px;">Subscribe</button>
-                    <div id="validator-newsletter" class="form-result"></div>
-                  </form>
-                </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="Chicken burger" />
+              <div>
+                <h2>Chicken burger</h2>
               </div>
             </div>
-  
-  
           </div>
         </div>
-  
-        <!-- Footer -->
-        <footer class="bg-dark text-center text-white">
-  
-          <!-- Grid container -->
-          <div class="container p-4 pb-0">
-            <!-- Section: Social media -->
-            <section class="mb-4">
-              <!-- Facebook -->
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                  class="fa fa-facebook-f"></i></a>
-  
-              <!-- Twitter -->
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-twitter"></i></a>
-  
-              <!-- Google -->
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i class="fa fa-google"></i></a>
-  
-              <!-- Instagram -->
-              <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"><i
-                  class="fa fa-instagram"></i></a>
-  
-            </section>
-            <!-- Section: Social media -->
-          </div>
-          <!-- Grid container -->
-  
-          <!-- Copyright -->
-          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            codewithmimi © 2023 All Rights Reserved.
-          </div>
-          <!-- Copyright -->
-        </footer>
-  
-      </footer>
 
-    <!-- js link -->
+      </div>
+    </section>
+
+
+
+    <!-- swiper layout part 3-->
+    <section class="ms-2 me-2 mt-2 m-5 p-2" style="border: 2px solid transparent;">
+      <div class="m-5">
+
+        <h1 class="text-center mb-2 fw-bold">Reviews</h1>
+        <div class="text-center mb-5">Check the prices of our packages
+        </div>
+        <!-- <div class="text-center mb-5 text-white">....</div> -->
+
+
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" alt="Grilled steak with vegetables" />
+              <div>
+                <h2>Grilled steak with vegetables</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80" alt="Pizza" />
+              <div>
+                <h2>Pizza</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=410&q=80" alt="Sandwich with boiled egg" />
+              <div>
+                <h2>Sandwich with boiled egg</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80" alt="Toast bread with blueberry" />
+              <div>
+                <h2>Toast bread with blueberry</h2>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="Chicken burger" />
+              <div>
+                <h2>Chicken burger</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+  <!-- end wraper parent div -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- FontAwesome js linkup -->
+  <script src="assets/js/fontawesome_min.js"></script>
+  <!-- Combination of js and popper bootstrap js -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <!-- swiper js link -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "1",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 4,
+        slideShadows: false
+      },
+      keyboard: {
+        enabled: true
+      },
+      mousewheel: {
+        thresholdDelta: 70
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2
+        }
+      }
+    });
+
+  </script>
+
 
 </body>
 

@@ -20,248 +20,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom css linkup -->
+  <link rel="stylesheet" href="assets/css/custom.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
+
   <style>
-    * {
-      margin: 0px;
-      padding: 0px;
-      box-sizing: border-box;
-    }
-
-    html {
-      overflow-x: hidden;
-
-    }
-
-    /* variable is not working this way */
-    :root {
-      --black-color: black;
-      --white-color: white;
-    }
-
-
-
-
-    body {
-      font-family: Poppins, sans-serif;
-    }
-
-    /* .black_bg_color {
-                background-color: var(--black-color);
-              } */
-
-
-    /* navbar css */
-
-    .banner_parent {
-      width: 100vw;
-    }
-
-    .banner_part {
-      height: 80vh;
-      background-image: url("assets/img/banner.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      /* width: 100%; */
-      background-position: center center;
-      /* Keep the background image fixed within the viewport */
-    }
-
-    /* swiper css  */
-    .swiper {
-      width: 100%;
-      height: 100%;
-      margin: 1em 0;
-    }
-
-    .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      aspect-ratio: 1;
-    }
-
-
-    /* footer css */
-    .footer-main {
-      padding-top: 90px;
-    }
-
-    .address-main>div.col-lg-4 {
-      border-bottom: dotted 1px #999;
-    }
-
-    .address-box {
-      padding: 10px 0;
-      margin-bottom: 30px;
-    }
-
-    .add-icon {
-      float: left;
-      width: 60px;
-      display: inline-block;
-      padding: 0px 5px;
-    }
-
-    .address-box .add-icon {
-      background: #27303b;
-      height: 75px;
-      line-height: 75px;
-      width: 75px;
-      margin-right: 20px;
-      text-align: center;
-    }
-
-    .add-icon img {
-      width: 100%;
-    }
-
-    .address-box .add-icon img {
-      max-width: 40px;
-    }
-
-    .add-content {
-      padding-left: 70px;
-    }
-
-    .add-content h5 {
-      font-size: 17px;
-      color: #ffffff;
-      padding: 0;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    .add-content p {
-      font-size: 13px;
-      color: #999999;
-      font-weight: 300;
-    }
-
-    .add-content p a {
-      font-size: 14px;
-      color: #999999;
-      font-weight: 300;
-      word-wrap: break-word;
-    }
-
-    .add-content p a:hover {
-      color: #ffb32d;
-    }
-
-    .footer-main {
-      padding-top: 70px;
-    }
-
-    .address-main>div.col-lg-4 {
-      border-bottom: dotted 1px #999;
-    }
-
-    .address-box {
-      padding: 10px 0;
-      margin-bottom: 30px;
-    }
-
-    .add-icon {
-      float: left;
-      width: 60px;
-      display: inline-block;
-      padding: 0px 5px;
-    }
-
-    .address-box .add-icon {
-      background: #27303b;
-      height: 75px;
-      line-height: 75px;
-      width: 75px;
-      margin-right: 20px;
-      text-align: center;
-    }
-
-    .add-icon img {
-      width: 100%;
-    }
-
-    .address-box .add-icon img {
-      max-width: 40px;
-    }
-
-    .add-content {
-      padding-left: 70px;
-    }
-
-    .add-content h5 {
-      font-size: 17px;
-      color: #ffffff;
-      padding: 0;
-      font-weight: 500;
-      margin-bottom: 10px;
-    }
-
-    .add-content p {
-      font-size: 13px;
-      color: #999999;
-      font-weight: 300;
-    }
-
-    .add-content p a {
-      font-size: 14px;
-      color: #999999;
-      font-weight: 300;
-      word-wrap: break-word;
-    }
-
-    .add-content p a:hover {
-      color: #ffb32d;
-    }
-
-    /* others css */
-    .img_width {
-      height: auto;
-      width: 100%;
-      max-width: 600px;
-
-    }
-
-
-    /* Media query */
-    @media only screen and (max-width: 1400px) {
-      .text-color {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.5);
-        /* opacity: 80%; */
-        padding: 10px;
-      }
-
-    }
-
-    /* Large Screens (993px to 1200px) */
-    @media only screen and (max-width: 992px) {
-      .d-class {
-        display: none;
-      }
-
-      .width_list {
-        height: 1px !important;
-        width: 100% !important;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
-
-      .margin_left {
-        margin-left: 70px;
-      }
-
-      .form-control1 {
-        max-width: 200px;
-      }
-    }
+    /* Go to the style and custom.css file for getting your custom css all file */
   </style>
-
 
 </head>
 
@@ -323,17 +88,17 @@
     </nav>
 
 
-
     <!-- Banner start -->
-    <section class="img-fluid banner_parent mb-5" style="border: 2px solid transparent">
+    <section class="mb-5 img-fluid banner_parent" style="border: 2px solid transparent">
 
       <section class="banner_part row ">
         <div class="col-12 col-md-6 col-lg-6 col-xl-6" style="border: 1px solid transparent"></div>
+
         <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6" style="border: 1px solid transparent">
 
           <div class="text-capitalize text-center text-color p-md-3 p-sm-2 p-lg-3">
             <h2 class="fw-bold">Elevating Ordinary
-              Ingredients
+              Ingtransparentients
             </h2>
             <h4>We Transforms Meals into Art</h4>
           </div>
@@ -343,37 +108,33 @@
     </section>
 
 
-
     <!-- layout part 1-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+    <section class="ms-2 me-2 mt-2 mb-5" style="border: 2px solid transparent;">
+      <div class="">
 
-        <h1 class="text-center mb-5 mb-md-2 mb-lg-2  fw-bold">Brands</h1>
-        <div class="text-center mb-2 text-white">....</div>
+        <h1 class="text-center fw-bold mb-5">Brands</h1>
 
-        <div class="row mt-5">
+        <div class="row " style="border: 2px solid transparent;">
 
-          <div class="d-flex justify-content-center align-items-center pb-md-5 pb-sm-5 pb-lg-5 col-12 col-md-12 col-lg-12 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
-              <div style="border: 3px solid transparent;">
-                <h2 class="">Welcome to
-                  <br>
-                  Our Restaurant
-                </h2>
-                <h4 class="mt-2" style="">
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="text-align: justify; border: 3px solid transparent">
 
-                  architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                  Explicabo alias a
-                  suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
-                  architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                  Explicabo alias a
-                  suscipit? Qui nulla sequi aperiam itaque?
-                </h4>
+            <div class="p-5">
+              <h2 class="fw-bold mb-4">
+                Welcome to
+                <br>
+                Our Restaurant
+              </h2>
+              <div style="">
+                architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
+                Explicabo alitate vitae reiciendis repudiandae temporibus sit qui, officia, accusantium explicabo dolores fugiat veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat rem id vero vel minus neque voluptatem, perferendis magnam laboriosam mollitia in iure, perspiciatis cum?
+                Autem eveniet corrupti exercitationem quia impedit quas. Ullam eveniet dolor quas ut ex incidunt, officia
+                recusandae dicta qui sint vel reiciendis soluta laborum vitae unde totam.
               </div>
             </div>
           </div>
 
-          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6  pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent" style="border: 3px solid blue;">
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 mt-sm-5 mt-lg-0 mt-md-5" style="border: 3px solid transparent;">
             <div class="">
               <img class="img_width" src="/assets/img/layout1.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
             </div>
@@ -384,123 +145,102 @@
       </div>
     </section>
 
-
-
     <!-- layout part 2-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
+    <section class="ms-2 me-2 mt-2 mb-5" style="border: 2px solid transparent;">
+      <div class="">
 
-        <!-- <h1 class="text-center mb-5 fw-bold">Brands</h1> -->
-        <div class="text-center mb-5 text-white">....</div>
+        <h1 class="text-center fw-bold mb-5"></h1>
 
-        <div class="row mt-5">
+        <div class="row " style="border: 2px solid transparent;">
 
-          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent;">
             <div class="">
               <img class="img_width" src="/assets/img/layout2.jpg" alt="Not Available" height="" width="" style="border: 1px solid transparent">
             </div>
           </div>
 
+          <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 mt-sm-5 mt-lg-0 mt-md-5" style="text-align: justify; border: 3px solid transparent">
 
-          <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6" style="border: 3px solid transparent">
-            <div class="" style="border: 1px solid transparent;">
+            <div class="p-5">
+              <h2 class="fw-bold mb-4">
+                Why Choose Us
+              </h2>
+              <div style="">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum blanditiis numquam vero? Unde at esse maxime id placeat odit maiores, officia ipsa laboriosam dolores adipisci recusandae aliquam magni et quam eum quibusdam ullam eius reiciendis vero suscipit ipsam? Saepe libero ut et
+                dicta officia aliquid odit animi, quibusdam explicabo dolores non aperiam totam provident! Dicta nihil est vero nobis at, aut voluptas consequatur quibusdam consequuntur atque accusantium soluta repudiandae. Id dignissimos mollitia consectetur possimus consequuntur necessitatibus
+                saepe? Sapiente debitis saepe omnis eligendi nulla earum quae enim officiis cupiditate vitae reiciendis repudiandae temporibus sit qui, officia, accusantium explicabo dolores fugiat veniam!
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <div class="d-flex justify-content-center align-items-center">
-                <div style="border: 3px solid transparent;">
+      </div>
+    </section>
 
-                  <h2 class="">Why Choose Us
-                  </h2>
-                  <h4 class="mt-2" style="">
-                    suscipit? Qui nulla sequi aperiam itaque?non nihil sequi est expedita doloribus amet delectus
-                    architecto adipisci praesentium dignissimos ipsam id tempora quos fugiat veritatis, reiciendis quod.
-                    Explicabo alias a
-                    suscipit? Qui nulla sequi aperiam itaque?
-                  </h4>
+
+    <!-- swiper layout part 3-->
+    <section class="ms-2 me-2 mt-2 mb-5 p-2" style="border: 2px solid transparent;">
+      <div class="mb-5">
+
+        <h1 class="text-center mb-2 fw-bold">Reviews</h1>
+        <div class="text-center mb-5">Check the prices of our packages
+        </div>
+        <!-- <div class="text-center mb-5 text-white">....</div> -->
+
+        <!-- Swiper -->
+        <div class="swiper_body">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" alt="Grilled steak with vegetables" />
+                <div>
+                  <h2>Grilled steak with vegetables</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80" alt="Pizza" />
+                <div>
+                  <h2>Pizza</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=410&q=80" alt="Sandwich with boiled egg" />
+                <div>
+                  <h2>Sandwich with boiled egg</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80" alt="Toast bread with transparentberry" />
+                <div>
+                  <h2>Toast bread with transparentberry</h2>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="Chicken burger" />
+                <div>
+                  <h2>Chicken burger</h2>
                 </div>
               </div>
 
+
             </div>
           </div>
-
-
         </div>
 
       </div>
     </section>
 
-    <!-- layout part 3-->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
-      <div class="m-5">
-
-        <h1 class="text-center mb-2 fw-bold">Reviews</h1>
-        <div class="text-center mb-2">Check the prices of our packages
-        </div>
-        <!-- <div class="text-center mb-5 text-white">....</div> -->
-        <div class="swiper" data-swiper='{"spaceBetween":12,"slidesPerView":3,"pagination":{"el":".swiper-pagination"},"autoplay":{"delay":"1000"},
-        "breakpoints":{"320":{"slidesPerView":2,"spaceBetween":20},
-        "480":{"slidesPerView":3,"spaceBetween":30},"640":{"slidesPerView":4,"spaceBetween":40}}}'>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/1.png" alt="not Available" height="auto" width="300px">
-                <div>Item1</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/2.png" alt="not Available" height="auto" width="300px">
-                <div>Item2</div>
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/3.png" alt="not Available" height="auto" width="300px">
-                <div>Item3</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/3.png" alt="not Available" height="auto" width="300px">
-                <div>Item4</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/5.png" alt="not Available" height="auto" width="300px">
-                <div>Item5</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/2.png" alt="not Available" height="auto" width="300px">
-                <div>Item6</div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div>
-                <img src="assets/img/slider/2.png" alt="not Available" height="auto" width="300px">
-                <div>Item7</div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
 
 
     <!-- Menu layout start -->
-    <section class="m-5 p-2" style="border: 2px solid transparent;">
+    <section class="ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mb-5" style="border: 2px solid transparent;">
 
       <!-- part 1-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
+      <section class="mb-2" style="border: 2px solid transparent;">
+        <div class="">
 
-          <h1 class="text-center mb-5 fw-bold">Menu</h1>
-          <div class="text-center text-white">....</div>
+          <h1 class="text-center mb-5 mb-sm-5 mb-lg-5 mb-md-5  fw-bold">Menu</h1>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -581,7 +321,7 @@
       <section class="mb-5" style="border: 2px solid transparent;">
         <div class="m-5">
 
-          <div class="text-center text-white">....</div>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -663,7 +403,7 @@
       <section class="mb-5" style="border: 2px solid transparent;">
         <div class="m-5">
 
-          <div class="text-center text-white">....</div>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -745,7 +485,7 @@
       <section class="mb-5" style="border: 2px solid transparent;">
         <div class="m-5">
 
-          <div class="text-center text-white">....</div>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -830,7 +570,7 @@
       <section class="mb-5" style="border: 2px solid transparent;">
         <div class="m-5">
 
-          <div class="text-center text-white">....</div>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -913,7 +653,7 @@
       <section class="mb-5" style="border: 2px solid transparent;">
         <div class="m-5">
 
-          <div class="text-center text-white">....</div>
+          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
           <div class="row mt-5">
 
@@ -998,119 +738,8 @@
     </section>
 
 
-    <!-- layout part Reviews-->
-    <section class="" style="border: 2px solid transparent ;">
-      <div class="m-5">
 
-        <h1 class="text-center fw-bold">Reviews</h1>
-        <div class="text-center fw-bold" style="font-size: 25px;">Food Lover’s Say</div>
-
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-
-            <div class="row mt-5">
-
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-        </div>
-
-
-        <div class="row  mt-5">
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-
-            <div class="row ">
-
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/5.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-            <div class="row ">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/2.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-            <div class="row ">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/3.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-
-          <div class="col-md-6 col-lg-6 col-xl-6 mb-4" style="border: 3px solid transparent">
-            <div class="row ">
-              <div class="d-flex justify-content-center align-items-center">
-                <div class="col-md-3 col-lg-3 col-xl-3 text-center">
-                  <img src="/assets/img/slider/4.png" alt="Not Available" height="auto" width="100px" style="border: 1px solid transparent">
-                </div>
-
-                <div class="col-md-3 col-lg-3 col-xl-3">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, perspiciatis.
-                  Magnam nostrum voluptates hic enim explicabo beatae blanditiis asperiores iusto.
-                </div>
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- another footer -->
+    <!-- Another footer -->
     <footer class="footer-area">
       <div class="container">
         <div class="row">
@@ -1186,7 +815,7 @@
                 <p>To get the latest news and latest updates from us.</p>
                 <form class="newsletter-form" data-bs-toggle="validator">
                   <label>Your E-mail Address:</label>
-                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" required autocomplete="off" />
+                  <input type="email" class="input-newsletter" placeholder="Enter your email" name="EMAIL" requitransparent autocomplete="off" />
                   <button type="submit">Subscribe</button>
                   <div id="validator-newsletter" class="form-result"></div>
                 </form>
@@ -1198,26 +827,26 @@
           <div class="row align-items-center">
             <div class="col-lg-6 col-md-6">
               <p>
-                © Powered by
+                © Powetransparent by
                 <a href="https://ztrios.com/" target="_blank" style="font-size: 18px;">Ztrios</a>
               </p>
             </div>
             <div class="col-lg-6 col-md-6">
               <ul class="payment-types">
                 <li>
-                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/visa.png" alt="image" /></a>
+                  <a href="index.html#" target="_blank"><img src="assets/img/payment/visa.png" alt="image" /></a>
                 </li>
                 <li>
-                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/mastercard.png" alt="image" /></a>
+                  <a href="index.html#" target="_blank"><img src="assets/img/payment/mastercard.png" alt="image" /></a>
                 </li>
                 <li>
-                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/mastercard2.png" alt="image" /></a>
+                  <a href="index.html#" target="_blank"><img src="assets/img/payment/mastercard2.png" alt="image" /></a>
                 </li>
                 <li>
-                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/visa2.png" alt="image" /></a>
+                  <a href="index.html#" target="_blank"><img src="assets/img/payment/visa2.png" alt="image" /></a>
                 </li>
                 <li>
-                  <a href="index.html#" target="_blank"><img src="asset1/img/payment/expresscard.png" alt="image" /></a>
+                  <a href="index.html#" target="_blank"><img src="assets/img/payment/expresscard.png" alt="image" /></a>
                 </li>
               </ul>
             </div>
@@ -1231,6 +860,7 @@
       </div>
     </footer>
     <div class="go-top"><i class="bx bx-up-arrow-alt"></i></div>
+
   </div>
   <!-- end wraper parent div -->
 
@@ -1239,74 +869,37 @@
   <script src="assets/js/fontawesome_min.js"></script>
   <!-- Combination of js and popper bootstrap js -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
+
   <!-- swiper js link -->
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script>
-    // basic options for all sliders
-    let defaults = {
-      spaceBetween: 5,
-      slidesPerView: 2
-    };
-    // call init function
-    initSwipers(defaults);
-
-    function initSwipers(defaults = {}, selector = ".swiper") {
-      let swipers = document.querySelectorAll(selector);
-      swipers.forEach((swiper) => {
-        // get options
-        let optionsData = swiper.dataset.swiper
-          ? JSON.parse(swiper.dataset.swiper)
-          : {};
-        // combine defaults and custom options
-        let options = {
-          ...defaults,
-          ...optionsData
-        };
-
-        //console.log(options);
-        // init
-        new Swiper(swiper, options);
-      });
-    }
-
-    /**
-    * JSON.stringify as a helper
-    * to get the correct attribute string
-    
-    let options = {
-      spaceBetween: 12,
-      slidesPerView: 3,
-      pagination: { el: ".swiper-pagination" },
-      autoplay: { delay: "1000" },
+    var swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centetransparentSlides: true,
+      loop: true,
+      slidesPerView: "1",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 4,
+        slideShadows: false
+      },
+      keyboard: {
+        enabled: true
+      },
+      mousewheel: {
+        thresholdDelta: 70
+      },
       breakpoints: {
-        // when window width is >= 320px
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 30
-        },
-        // when window width is >= 640px
         640: {
-          slidesPerView: 4,
-          spaceBetween: 40
+          slidesPerView: 2
         }
       }
-    };
-    
-    console.log(JSON.stringify(options));
-    */
+    });
 
   </script>
-
-  <script>
-
-  </script>
-
-
 </body>
 
 </html>
