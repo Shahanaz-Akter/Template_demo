@@ -34,24 +34,24 @@ body {
 
 /* end navbar css */
 
-/* new swiper css start*/
+
+/* review css */
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap");
 
 .swiper_body {
     position: relative;
-    height: 50vh;
+    height: 100%;
 }
 
 /* body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-  } */
-
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+} */
 .swiper {
     max-width: 50%;
     overflow: visible;
@@ -125,7 +125,7 @@ body {
 
 .swiper-slide img {
     display: block;
-    width: 90%;
+    width: 100%;
     object-fit: cover;
     box-shadow: 0px 3px 17px rgb(0 0 0 / 25%);
     border-radius: 50%;
@@ -138,18 +138,14 @@ body {
     }
 }
 
-/* new swiper css end*/
+
+/* review swiper css end*/
 
 
 
-@media (min-width: 768px) {
-    .swiper-slide h2 {
-        font-size: 2rem;
-    }
-}
+
 
 /* start footer css */
-
 .footer-main {
     padding-top: 90px;
 }
