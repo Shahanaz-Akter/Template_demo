@@ -20,6 +20,7 @@ body {
 /* start navbar css */
 .banner_parent {
     width: 100vw;
+
 }
 
 .banner_part {
@@ -43,15 +44,6 @@ body {
     height: 100%;
 }
 
-/* body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-} */
 .swiper {
     max-width: 50%;
     overflow: visible;
@@ -138,12 +130,7 @@ body {
     }
 }
 
-
 /* review swiper css end*/
-
-
-
-
 
 /* start footer css */
 .footer-main {
@@ -160,7 +147,7 @@ body {
 }
 
 .add-icon {
-    float: left;
+    /* float: left; */
     width: 60px;
     display: inline-block;
     padding: 0px 5px;
@@ -300,6 +287,16 @@ body {
 
 }
 
+@media only screen and (max-width: 640px) {
+    .margin-down {
+        margin-top: 300px;
+
+    }
+
+
+}
+
+
 /* Large Screens (993px to 1200px) */
 @media only screen and (max-width: 992px) {
     .d-class {
@@ -320,4 +317,6 @@ body {
     .form-control1 {
         max-width: 200px;
     }
+
+
 }

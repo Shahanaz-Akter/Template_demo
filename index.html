@@ -17,6 +17,9 @@
   <!-- Boxicon linkup -->
   <!-- <link rel="stylesheet" href="assets/css/css_boxicons.min.css" /> -->
 
+
+  <!-- footer boxicon linkup -->
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Custom css linkup -->
@@ -24,53 +27,157 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
 
-  <!-- <style>
-    html,
-    body {
-      position: relative;
-      height: 100%;
+  <style>
+    /* preloader css code */
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+    body.loading .pre_body {
+      display: flex;
     }
 
-    body {
-      background: #eee;
-      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-      font-size: 14px;
-      color: #000;
-      margin: 0;
-      padding: 0;
-    }
 
-    .swiper {
-      width: 100%;
-      height: 100%;
-    }
-
-    .swiper-slide {
+    .pre_body {
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
       text-align: center;
-      font-size: 18px;
-      background: #fff;
+      background: black;
+    }
+
+    .container1 {
+      position: relative;
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
     }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .wrapper1 {
+      position: absolute;
+      top: -35px;
+      transform: scale(1.5);
     }
-  </style> -->
+
+    .loader1 {
+      height: 25px;
+      width: 1px;
+      position: absolute;
+      animation: rotate 3.5s linear infinite;
+    }
+
+    .loader1 .dot1 {
+      top: 30px;
+      height: 7px;
+      width: 7px;
+      background: #fff;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .text1 {
+      position: absolute;
+      bottom: -85px;
+      font-size: 25px;
+      font-weight: 400;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+
+    @keyframes rotate {
+      30% {
+        transform: rotate(220deg);
+      }
+
+      40% {
+        transform: rotate(450deg);
+        opacity: 1;
+      }
+
+      75% {
+        transform: rotate(720deg);
+        opacity: 1;
+      }
+
+      76% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 0;
+        transform: rotate(0deg);
+      }
+    }
+
+    .loader1:nth-child(1) {
+      animation-delay: 0.15s;
+    }
+
+    .loader1:nth-child(2) {
+      animation-delay: 0.3s;
+    }
+
+    .loader1:nth-child(3) {
+      animation-delay: 0.45s;
+    }
+
+    .loader1:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .loader1:nth-child(5) {
+      animation-delay: 0.75s;
+    }
+
+    .loader1:nth-child(6) {
+      animation-delay: 0.9s;
+    }
+
+    .navbar {
+      z-index: 1;
+    }
+  </style>
 
 </head>
 
-<body>
+<body class="loading">
 
-  <!-- start wrapper parent div -->
-  <div class="ms-0 me-0 mt-0 mb-3">
+  <!-- start Preloader-->
+  <div class="pre_body" id="preloader">
+    <div class="container1">
+      <div class="wrapper1">
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+        <div class="loader1">
+          <div class="dot1"></div>
+        </div>
+      </div>
+      <div class="text1">
+        Please wait
+      </div>
+    </div>
+  </div>
+  <!-- end Preloader-->
+
+
+  <div class="ms-0 me-0 mt-0 mb-3" style="z-index:4!important;">
 
     <!-- navbar start bg-body-tertiary -->
-    <nav class="fixed-top navbar bg-dark navbar-expand-lg border border-opacity-50 b border-secondary-subtle p-4 ms-0 me-0 mt-0">
+
+    <nav class="nav_index fixed-top navbar bg-dark navbar-expand-lg border border-opacity-50 b border-secondary-subtle p-4 ms-0 me-0 mt-0">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -120,7 +227,6 @@
         </div>
       </div>
     </nav>
-
 
     <!-- Banner start -->
     <section class="mb-5 img-fluid banner_parent" style="border: 2px solid transparent">
@@ -213,7 +319,7 @@
 
 
     <!-- Review swiper layout-3-->
-    <section class="ms-2 me-2 mt-2 mb-5 p-2" style="border: 2px solid transparent;">
+    <section class="ms-2 me-2 mt-2 mb-5 pb-5" style="border: 2px solid transparent;">
       <div class="mb-5">
 
         <h1 class="text-center mb-5 fw-bold">Reviews</h1>
@@ -233,31 +339,31 @@
                 <div class="swiper-slide">
                   <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=876&q=80" alt="Grilled steak with vegetables" />
                   <div>
-                    <h2>Grilled steak with vegetables</h2>
+                    <h2 class="mt-2">Grilled steak with vegetables</h2>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=481&q=80" alt="Pizza" />
                   <div>
-                    <h2>Pizza</h2>
+                    <h2 class="mt-2">Pizza</h2>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=410&q=80" alt="Sandwich with boiled egg" />
                   <div>
-                    <h2>Sandwich with boiled egg</h2>
+                    <h2 class="mt-2">Sandwich with boiled egg</h2>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=449&q=80" alt="Toast bread with blueberry" />
                   <div>
-                    <h2>Toast bread with blueberry</h2>
+                    <h2 class="mt-2">Toast bread with blueberry</h2>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <img src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=435&q=80" alt="Chicken burger" />
                   <div>
-                    <h2>Chicken burger</h2>
+                    <h2 class="mt-2">Chicken burger</h2>
                   </div>
                 </div>
               </div>
@@ -269,23 +375,184 @@
       </div>
     </section>
 
-
-
-
     <!-- Menu all swiper layout-3-->
-    <section class="ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mb-5" style="border: 2px solid transparent;">
+    <div class="text-white" style="margin-top: 30%; border: 2px solid transparent;">.....</div>
+
+    <!-- part 1-->
+    <section class="margin_down pt-sm-5 mb-2" style="border: 2px solid transparent;">
+      <h1 class="text-center mb-5 mb-sm-5 mb-lg-5 mb-md-5 fw-bold">Food Menu Our</h1>
+      <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+
+      <div class="mt-5">
+        <div id="carouselExampleControls" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="row">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/ice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+          </button>
+        </div>
+      </div>
+      <!-- Carousel wrapper -->
+    </section>
 
 
-      <!-- example -->
-      <!-- <section class="" style="border: 2px solid transparent;">
-        <div class="swip_html">
-          <div class="swip_body">
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
+    <!-- part 2-->
+    <section class="mb-5" style="border: 2px solid transparent;">
+      <div class="m-5">
 
-                <div class="swiper-slide row">
+        <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
-                  <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+        <div class="mt-5">
+          <div id="carouselExampleControls1" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mt-5">
+
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                    <div class="">
+                      <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+                    </div>
+                  </div>
+
+
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
                     <div class="" style="border: 1px solid transparent;">
 
                       <div class="d-flex justify-content-center align-items-center">
@@ -296,7 +563,6 @@
                           <div class="mt-2" style="">
 
                             <div>
-                              <p class="fs-5">1</p>
                               <div>Lorem ipsum dolor sit amet.........................54</div>
                               <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                             </div>
@@ -316,18 +582,19 @@
                     </div>
                   </div>
 
-                  <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row mt-5">
+
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
                     <div class="">
-                      <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                      <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
                     </div>
                   </div>
 
-                </div>
-
-
-                <div class="swiper-slide row">
-
-                  <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
                     <div class="" style="border: 1px solid transparent;">
 
                       <div class="d-flex justify-content-center align-items-center">
@@ -338,7 +605,6 @@
                           <div class="mt-2" style="">
 
                             <div>
-                              <p class="fs-5">2</p>
                               <div>Lorem ipsum dolor sit amet.........................54</div>
                               <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                             </div>
@@ -358,492 +624,610 @@
                     </div>
                   </div>
 
-                  <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                </div>
+              </div>
+
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="prev">
+                <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span> -->
+                <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls1" data-bs-slide="next">
+                <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span> -->
+                <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+              </button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- part 3-->
+    <section class="mb-2" style="border: 2px solid transparent;">
+      <!-- <h1 class="text-center mb-5 mb-sm-5 mb-lg-5 mb-md-5  fw-bold">Food Menu Our</h1> -->
+      <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+
+      <div class="mt-5">
+        <div id="carouselExampleControls3" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <div class="row mt-5">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row mt-5">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/vege.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row mt-5">
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
+
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
+
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
+
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="prev">
+            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span> -->
+            <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls3" data-bs-slide="next">
+            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span> -->
+            <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+          </button>
+        </div>
+      </div>
+      <!-- Carousel wrapper -->
+    </section>
+
+    <!-- part 4-->
+    <section class="mb-5" style="border: 2px solid transparent;">
+      <div class="m-5">
+
+        <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+
+        <div class="mt-5">
+          <div id="carouselExampleControls4" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+              <div class="carousel-item active">
+                <div class="row mt-5">
+
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
                     <div class="">
-                      <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                      <img class="img_width" src="/assets/img/drinks.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
                     </div>
                   </div>
 
-                </div>
 
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
+                    <div class="" style="border: 1px solid transparent;">
 
-              </div>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div style="border: 3px solid transparent;">
 
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+                          <h2 class="mb-4">Main Menu
+                          </h2>
+                          <div class="mt-2" style="">
 
+                            <div class="mt-2" style="">
 
-      <div class="" style="margin-bottom: 500px;"></div>
+                              <div>
+                                <div>Lorem ipsum dolor sit amet.........................54</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+                              <div>
+                                <div>Lorem ipsum dolor sit amet..........................90</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+                              <div>
+                                <div>Lorem ipsum dolor sit amet..........................54</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
 
-      <!-- part 1-->
-      <section class="mb-2" style="border: 2px solid transparent;">
-        <div class="">
+                            </div>
 
-          <h1 class="text-center mb-5 mb-sm-5 mb-lg-5 mb-md-5  fw-bold">Food Menu Our</h1>
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+                          </div>
+                        </div>
 
-          <div class="row mt-5">
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
-
-                <div class="d-flex justify-content-center align-items-center">
-                  <div style="border: 3px solid transparent;">
-
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
-
-                      <div>
-                        <div>Lorem ipsum dolor sit amet.........................54</div>
-                        <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                       </div>
-                      <div>
-                        <div>Lorem ipsum dolor sit amet..........................90</div>
-                        <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
-                      </div>
-                      <div>
-                        <div>Lorem ipsum dolor sit amet..........................54</div>
-                        <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
-                      </div>
-
                     </div>
                   </div>
 
                 </div>
               </div>
-            </div>
 
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
-              </div>
-            </div>
+              <div class="carousel-item">
+                <div class="row mt-5">
 
-          </div>
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                    <div class="">
+                      <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+                    </div>
+                  </div>
 
-        </div>
-      </section>
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
+                    <div class="" style="border: 1px solid transparent;">
 
-      <!-- part 2-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div style="border: 3px solid transparent;">
 
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
-
-          <div class="row mt-5">
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
-              </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
-
-                <div class="d-flex justify-content-center align-items-center">
-                  <div style="border: 3px solid transparent;">
-
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
-
-                      <div class="accordion" id="accordionFlushExample">
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
+                          <h2 class="mb-4">Main Menu
                           </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                              body.</div>
-                          </div>
-                        </div>
+                          <div class="mt-2" style="">
 
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                              body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
+                            <div>
+                              <div>Lorem ipsum dolor sit amet.........................54</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div>
+                              <div>Lorem ipsum dolor sit amet..........................90</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div>
+                              <div>Lorem ipsum dolor sit amet..........................54</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
 
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                              body. Nothing more exciting happening here in terms of content, but just filling up the
-                              space to make it look, at least at first glance, a bit more representative of how this would
-                              look in a real-world application.</div>
                           </div>
                         </div>
 
                       </div>
-
                     </div>
                   </div>
 
                 </div>
               </div>
+
+
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+              </button>
             </div>
-
           </div>
-
         </div>
-      </section>
+    </section>
 
-      <!-- part 3-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
+    <!-- part 5-->
+    <section class="mb-2" style="border: 2px solid transparent;">
+      <!-- <h1 class="text-center mb-5 mb-sm-5 mb-lg-5 mb-md-5  fw-bold">Food Menu Our</h1> -->
+      <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+      <div class="mt-5">
+        <div id="carouselExampleControls5" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
 
-          <div class="row mt-5">
+          <div class="carousel-inner">
 
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
+            <div class="carousel-item active">
+              <div class="row mt-5">
 
-                <div class="d-flex justify-content-center align-items-center">
-                  <div style="border: 3px solid transparent;">
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
 
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
 
-                      <div class="accordion" id="accordionFlushExample">
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
 
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                              body.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                              body. Let's imagine this being filled with some actual content.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                              body. Nothing more exciting happening here in terms of content, but just filling up the
-                              space to make it look, at least at first glance, a bit more representative of how this would
-                              look in a real-world application.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
 
+                        </div>
                       </div>
 
                     </div>
                   </div>
-
                 </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/rice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/vege.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
-              </div>
-            </div>
+            <div class="carousel-item">
+              <div class="row mt-5">
 
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
 
-          </div>
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
 
-        </div>
-      </section>
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
 
-      <!-- part 4-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
-
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
-
-          <div class="row mt-5">
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/drinks.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
-              </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
-
-                <div class="d-flex justify-content-center align-items-center">
-                  <div style="border: 3px solid transparent;">
-
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
-
-                      <div class="accordion" id="accordionFlushExample">
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                              body.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                              body. Let's imagine this being filled with some actual content.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                              body. Nothing more exciting happening here in terms of content, but just filling up the
-                              space to make it look, at least at first glance, a bit more representative of how this would
-                              look in a real-world application.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
 
+                        </div>
                       </div>
 
                     </div>
                   </div>
-
                 </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/vege.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
               </div>
             </div>
 
+            <div class="carousel-item">
+              <div class="row mt-5">
 
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5" style="border: 3px solid transparent">
+                  <div class="" style="border: 1px solid transparent;">
 
+                    <div class="d-flex justify-content-center align-items-center">
+                      <div style="border: 3px solid transparent;">
 
-          </div>
+                        <h2 class="mb-4">Main Menu
+                        </h2>
+                        <div class="mt-2" style="">
 
-        </div>
-      </section>
-
-      <!-- part 5-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
-
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
-
-          <div class="row mt-5">
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
-
-                <div class="d-flex justify-content-center align-items-center">
-                  <div style="border: 3px solid transparent;">
-
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
-
-                      <div class="accordion" id="accordionFlushExample">
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                              body.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet.........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                              body. Let's imagine this being filled with some actual content.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................90</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                              body. Nothing more exciting happening here in terms of content, but just filling up the
-                              space to make it look, at least at first glance, a bit more representative of how this would
-                              look in a real-world application.</div>
+                          <div>
+                            <div>Lorem ipsum dolor sit amet..........................54</div>
+                            <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
                           </div>
-                        </div>
 
+                        </div>
                       </div>
 
                     </div>
                   </div>
-
                 </div>
+
+                <div class="d-flex justify-content-center align-items-center col-12 col-md-6 col-lg-6 col-xl-6" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                  <div class="">
+                    <img class="img_width" src="/assets/img/pizza.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/tea.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
-              </div>
-            </div>
-
 
           </div>
 
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls5" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+          </button>
         </div>
-      </section>
+      </div>
+      <!-- Carousel wrapper -->
+    </section>
 
 
-      <!-- part 6-->
-      <section class="mb-5" style="border: 2px solid transparent;">
-        <div class="m-5">
+    <!-- part 6-->
+    <section class="mb-5" style="border: 2px solid transparent;">
+      <div class="m-5">
 
-          <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
+        <div class="text-center text-white mb-5 mb-sm-5 mb-md-5 mb-lg-5">....</div>
 
-          <div class="row mt-5">
+        <div class="mt-5">
+          <div id="carouselExampleControls6" class="carousel slide ms-2 me-2 pt-lg-5 pt-md-5 pt-xl-5 mt-5 mb-5" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row mt-5">
 
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 " style="border: 3px solid transparent" style="border: 3px solid transparent;">
-              <div class="">
-                <img class="img_width" src="/assets/img/ice.png" alt="Not Available" height="400px" width="auto" style="border: 1px solid transparent">
-              </div>
-            </div>
-
-
-            <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 " style="border: 3px solid transparent">
-              <div class="" style="border: 1px solid transparent;">
-
-                <div class="">
-                  <div style="border: 3px solid transparent;">
-
-                    <h2 class="mb-4">Main Menu
-                    </h2>
-                    <div class="mt-2" style="">
-
-                      <div class="accordion" id="accordionFlushExample">
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                              Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                              body.</div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                              Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                              body. Let's imagine this being filled with some actual content.</div>
-                          </div>
-                        </div>
-
-                        <div class="accordion-item mb-3">
-                          <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                              Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
-                            </button>
-                          </h2>
-                          <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                              demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                              body. Nothing more exciting happening here in terms of content, but just filling up the
-                              space to make it look, at least at first glance, a bit more representative of how this would
-                              look in a real-world application.</div>
-                          </div>
-                        </div>
-
-                      </div>
-
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                    <div class="">
+                      <img class="img_width" src="/assets/img/drinks.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
                     </div>
                   </div>
 
+
+                  <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
+                    <div class="" style="border: 1px solid transparent;">
+
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div style="border: 3px solid transparent;">
+
+                          <h2 class="mb-4">Main Menu
+                          </h2>
+                          <div class="mt-2" style="">
+
+                            <div>
+                              <div>Lorem ipsum dolor sit amet.........................54</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div>
+                              <div>Lorem ipsum dolor sit amet..........................90</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+                            <div>
+                              <div>Lorem ipsum dolor sit amet..........................54</div>
+                              <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
+
+                <div class="carousel-item">
+                  <div class="row mt-5">
+
+                    <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 pb-md-5 pb-sm-5 pb-lg-5 order-sm-2 order-2 order-lg-1  order-xl-1  order-xxl-1" style="border: 3px solid transparent" style="border: 3px solid transparent;">
+                      <div class="">
+                        <img class="img_width" src="/assets/img/ice.png" alt="Not Available" height="" width="" style="border: 1px solid transparent">
+                      </div>
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center col-12 col-md-12 col-lg-12 col-xl-6 order-sm-1 order-md-1 order-lg-2  order-xl-2  order-xs-2" style="border: 3px solid transparent">
+                      <div class="" style="border: 1px solid transparent;">
+
+                        <div class="d-flex justify-content-center align-items-center">
+                          <div style="border: 3px solid transparent;">
+
+                            <h2 class="mb-4">Main Menu
+                            </h2>
+                            <!-- <div class="mt-2" style="">
+
+                              <div class="accordion" id="accordionFlushExample">
+
+                                <div class="accordion-item mb-3">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                      Accordion Item1 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                      demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                                      body.</div>
+                                  </div>
+                                </div>
+
+                                <div class="accordion-item mb-3">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                      Accordion Item2 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                      demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                                      body. Let's imagine this being filled with some actual content.</div>
+                                  </div>
+                                </div>
+
+                                <div class="accordion-item mb-3">
+                                  <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                      Accordion Item3 <span class="invisible">mulisdjbfghsxdcfdsfsdfghjkjhgfd</span>
+                                    </button>
+                                  </h2>
+                                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                      demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                                      body. Nothing more exciting happening here in terms of content, but just filling up the
+                                      space to make it look, at least at first glance, a bit more representative of how this would
+                                      look in a real-world application.</div>
+                                  </div>
+                                </div>
+
+                              </div>
+
+                            </div> -->
+                            <div class="mt-2" style="">
+
+                              <div>
+                                <div>Lorem ipsum dolor sit amet.........................54</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+                              <div>
+                                <div>Lorem ipsum dolor sit amet..........................90</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+                              <div>
+                                <div>Lorem ipsum dolor sit amet..........................54</div>
+                                <p style="font-size: 12px!important;">Lorem ipsum dolor sit amet, consectetur</p>
+                              </div>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                  <span class=""> <i class="fas fa-arrow-circle-left fs-2 text-black"></i></span>
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls6" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                  <span class=""> <i class="fas fa-arrow-circle-right fs-2 text-black"></i></span>
+                </button>
               </div>
             </div>
-
-
-
-
           </div>
-
-        </div>
-      </section>
+    </section>
 
     </section>
 
@@ -977,6 +1361,7 @@
 
   <!-- FontAwesome js linkup -->
   <script src="assets/js/fontawesome_min.js"></script>
+
   <!-- Combination of js and popper bootstrap js -->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
 
@@ -1011,16 +1396,19 @@
     });
   </script>
 
-
-  <!-- Menu swiper -->
+  <!-- preloader js code -->
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      pagination: '.swiper-pagination',
-      slidesPerView: 'auto',
-      paginationClickable: true,
-      spaceBetween: 0
+    // Wait for a 2-second delay and then hide the preloader
+    // When the DOM content is loaded
+    document.addEventListener('DOMContentLoaded', function () {
+      // Hide the preloader after a 2-second delay
+      setTimeout(function () {
+        var preloader = document.getElementById('preloader');
+        preloader.style.display = 'none';
+      });
     });
   </script>
+
 </body>
 
 </html>
